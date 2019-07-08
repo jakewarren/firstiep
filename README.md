@@ -35,11 +35,10 @@ func main() {
 	fmt.Println(i)
 
 	// perform validation on the object
-	isValid := i.Validate()
-	if isValid == nil {
+	if err := i.Validate(); err == nil {
 		fmt.Println("Valid!")
 	} else {
-		fmt.Println("Not valid:", isValid)
+		fmt.Println("Not valid:", err)
 	}
 
 }
