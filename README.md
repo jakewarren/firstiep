@@ -4,7 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/jakewarren/firstiep)](https://goreportcard.com/report/github.com/jakewarren/firstiep)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
 
-> Tools for working with FIRST IEP (Information Exchange Policy) objects
+> Tools for working with FIRST IEP (Information Exchange Policy) objects - https://www.first.org/iep/
 
 ## Demo
 ![](demo.gif)
