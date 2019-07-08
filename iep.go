@@ -9,6 +9,12 @@ import (
 	"github.com/oklog/ulid"
 )
 
+var entropy *ulid.MonotonicEntropy
+
+func init() {
+	entropy = ulid.Monotonic(rand.New(rand.NewSource(time.Now().UnixNano())), 0)
+}
+
 func (r *IEP) String() string {
 	json, err := json.MarshalIndent(r, "", "  ")
 	if err != nil {
@@ -19,9 +25,6 @@ func (r *IEP) String() string {
 }
 
 func New() *IEP {
-
-	entropy := ulid.Monotonic(rand.New(rand.NewSource(time.Now().UnixNano())), 0)
-
 	var i IEP
 
 	i.ID = ulid.MustNew(ulid.Timestamp(time.Now()), entropy).String()
