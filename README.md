@@ -29,9 +29,13 @@ import (
 
 func main() {
 
+	// create a new IEP object
 	i := firstiep.New()
+	
+	// fill in fields you want represented
 	i.TLP = "RED"
 
+	// output the object for inspection
 	fmt.Println(i)
 
 	// perform validation on the object
